@@ -19,7 +19,7 @@ else
 main(){
 int a[5]={3,1,8,9,6};
 int b=5;
-int size=firstIndex(a,5,1);
+int size=firstIndex(a,5,6);
 if(size)
 cout<<"Found First at position \t"<<abs(b-size)<<endl; 
 else
