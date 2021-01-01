@@ -17,5 +17,22 @@ main(){
 
      Faction f3= f1+f2;
      f3.print();
+
+
+     f3++;
+     f3.print();
+
+     ++(++f3);
+     f3.print();
+
+     f3+=f2;
+     f3.print();
+     f2.print();
+
+     Faction  f4= f3/f2;
+     f4.print();
+     f3.print();
+     f2.print();
+
 }
 

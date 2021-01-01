@@ -36,6 +36,32 @@ Faction f3(num,deno);
      f3.simplify();
      return f3;
  }
+ Faction operator/(Faction const  &f2){
+    int  num= numerator*f2.denominator;//+f2.numerator*denominator;
+    int  deno= denominator*f2.numerator;
+Faction f3(num,deno);
+     f3.simplify();
+     return f3;
+ }
+ Faction &operator+=(Faction const  &f2){
+    numerator= numerator*f2.denominator+f2.numerator*denominator;
+    denominator= denominator*f2.denominator;
+
+     simplify();
+     return *this;
+ }
+ 
+ Faction &operator++(){
+     numerator= numerator+denominator;
+     simplify();
+     return *this;
+ }
+ Faction operator++(int){
+     Faction fNew(numerator,denominator);
+     numerator=numerator+denominator;
+     simplify();
+     return fNew;
+ }
  void multiply(Faction const &f2){
      numerator= numerator*f2.numerator;
      denominator= denominator*f2.denominator;
