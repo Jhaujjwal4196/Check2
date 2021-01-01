@@ -7,9 +7,12 @@ main(){
     Student s1(20,name);
     s1.display();
 
-    name[3]='s';
-    Student s2(21,name);
+    //name[3]='s';
+    Student s2(s1);
     s2.display();
 
+    s2.name[0]='j';
+
     s1.display();
+    s2.display();
 }

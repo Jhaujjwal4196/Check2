@@ -3,6 +3,7 @@
 using namespace std;
 
 class Student{
+    public:
     int age;
     char *name;
     public:
@@ -16,6 +17,16 @@ class Student{
 
          this->name= new char[(strlen(name))+1];
          strcpy(this->name,name);
+            }
+            //copy constructor
+            Student( Student &s){
+                this->age= s.age;
+                //shallow copy..i.e to be avoided at any cost
+                //this->name= s.name;
+
+                //Deep Copy
+                this->name= new char[(strlen(s.name))+1];
+                strcpy(this->name,s.name);
             }
     void display(){
         cout<<"Age: \t"<<this->age<<"\n"<<"Name:\t"<<this->name<<endl;
