@@ -10,7 +10,7 @@ using namespace std;
          this->imaginary=imaginary;
      }
      void print(){
-         if(imaginary>0)
+         if(imaginary>=0)
          cout<<real<<"+"<<imaginary<<"i"<<endl;
          else
          cout<<real<<imaginary<<"i"<<endl;
