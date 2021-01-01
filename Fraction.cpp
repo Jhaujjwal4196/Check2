@@ -29,6 +29,13 @@ int denominator;
 
      simplify();
  }
+ Faction operator+(Faction const  &f2){
+    int  num= numerator*f2.denominator+f2.numerator*denominator;
+    int  deno= denominator*f2.denominator;
+Faction f3(num,deno);
+     f3.simplify();
+     return f3;
+ }
  void multiply(Faction const &f2){
      numerator= numerator*f2.numerator;
      denominator= denominator*f2.denominator;
