@@ -23,10 +23,15 @@ int denominator;
     denominator=denominator/gcd;
  }
 
- void add(Faction f2){
+ void add(Faction const  &f2){
      numerator= numerator*f2.denominator+f2.numerator*denominator;
      denominator= denominator*f2.denominator;
 
+     simplify();
+ }
+ void multiply(Faction const &f2){
+     numerator= numerator*f2.numerator;
+     denominator= denominator*f2.denominator;
      simplify();
  }
  };
