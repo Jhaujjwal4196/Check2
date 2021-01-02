@@ -54,6 +54,10 @@ Node *nextNode= temp->next;
 temp->next= nextNode->next;
 delete(nextNode);
 }
+void deleteNode(Node* node) {
+        node->data= node->next->data;
+        node->next=node->next->next;
+    }
  main(){
     Node *head= getInput();
      print(head);
