@@ -13,6 +13,7 @@ cout<<p1.first<<"\t"<<p1.second<<endl;
 cout<<p2.first<<"\t"<<p2.second<<endl;
 cout<<(p1==p3)<<endl;
 cout<<(p1!=p3)<<endl;
+//coopare operator just compares the first element rather than all 
 cout<<(p1>p3)<<endl;
 cout<<(p1<p3)<<endl;
 }
