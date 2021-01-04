@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #include <vector>
 using namespace std;
-void SortByMarks(int a[],int b[],int n){
+void SotByMarks(int a[],int b[],int n){
 pair <int, int>p1[n];
     
     for(int i=0;i<n;i++)
@@ -14,15 +14,16 @@ sort(p1,p1+n);
 void SortByMarks(int a[],int b[], int n){
     vector <pair<int,int>> v;
     for(int i=0;i<n;i++)
-    v.push_back(b[i],a[i]);
+    v.push_back({b[i],a[i]});
     sort(v.begin(),v.end(),greater<pair<int,int>>());
     for(auto it=v.begin();it!=v.end();it++)
-   cout<<(*it).second<<"\t"<<"(*it).second"<<endl;
+   cout<<(*it).second<<"\t"<<(*it).first<<endl;
 
 }
 main(){
     int ar[]={105,106,109,108,102};
     int arr[]={70,69,36,89,11};
-    SortByMarks(ar,arr,5);
+    SotByMarks(ar,arr,5);
+    cout<<"sorting by differeent algorithm"<<endl;
     SortByMarks(ar,arr,5);
 }
