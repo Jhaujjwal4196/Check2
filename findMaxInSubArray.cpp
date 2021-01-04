@@ -14,8 +14,23 @@ void getMaxSubArray(int a[],int n,int k){
     cout<<x<<"\t";
     cout<<endl;
 }
+void PrintMax(int a[],int n,int k){
+    deque <int> dq;
+    for(int i=0;i<k;i++){
+    while(!dq.empty()&&a[i]>=a[dq.back()])
+    dq.pop_back();
+    dq.push_back(i);}
+   for(int i=k;i<n;i++){
+       cout<<a[dq.front()]<<"\t";
+       while(!dq.empty()&&dq.front()<=(i-k))
+       dq.pop_front();
+       dq.push_back(i);
+   }
+    cout<<a[dq.front()]<<"\t";
+}
 main(){
     int arr[]={10,8,5,12,15,7,6};
     getMaxSubArray(arr,7,5);
-    
+    cout<<"From Optimized code"<<endl;
+    PrintMax(arr,7,5);
 }
