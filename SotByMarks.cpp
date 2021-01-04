@@ -1,6 +1,16 @@
 #include <bits/stdc++.h>
 #include <vector>
 using namespace std;
+//keeping index after sorting
+void SortArray(int a[],int n){
+    vector <pair<int,int>> v;
+    for(int i=0;i<n;i++)
+    v.push_back({a[i],i});
+    sort(v.begin(),v.end());
+    for(auto it=v.begin();it!=v.end();it++)
+   cout<<(*it).first<<"\t"<<(*it).second<<endl;
+
+}
 void SotByMarks(int a[],int b[],int n){
 pair <int, int>p1[n];
     
@@ -26,4 +36,6 @@ main(){
     SotByMarks(ar,arr,5);
     cout<<"sorting by differeent algorithm"<<endl;
     SortByMarks(ar,arr,5);
+    cout<<"Printing array with its index"<<endl;
+    SortArray(ar,5);
 }
