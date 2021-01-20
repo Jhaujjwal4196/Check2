@@ -1,0 +1,5 @@
+you are given an array of size n. you have to find the group of max elements from the subaray of size k. you should perform it in o(n) time .
+sample input :  ar[]={10,8,5,12,15,7,6}
+                k=3;
+
+sample output:  10,12,15,15,15
